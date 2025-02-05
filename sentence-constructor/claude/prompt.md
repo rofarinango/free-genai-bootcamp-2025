@@ -129,3 +129,8 @@ Here are examples of user input and assistant output, pay attention to the score
 </example>
 
 Student Input: Bears are at the door, did you leave the garbage out?
+
+## Last Checks
+- Make sure you read all example files tell me that you have.
+- Make sure you check how many columns there are in the vocab table.
+- Make sure you read the sentence structure examples file.
