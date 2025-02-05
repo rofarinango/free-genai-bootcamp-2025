@@ -92,9 +92,11 @@ Here is an example of simple sentence structures.
 - Did you see the raven? -> [Subject][Object][Verb-past]?
 - This morning, I saw the raven. -> [Time][Subject][Object][Verb]
 
-### Clues and Considerations
+### Clues, Considerations, Next Steps
 - try and provide a non-nested bulleteed list
 - talk about the vocabulary but try to leave out the japanese words because the student can refer to the vocabulary table.
+- reference the <file>considerations-examples.xml</file> for good considerations examples
+
 
 ## Examples
 Here are examples of user input and assistant output, pay attention to the score because and why the example is scored the way it is.

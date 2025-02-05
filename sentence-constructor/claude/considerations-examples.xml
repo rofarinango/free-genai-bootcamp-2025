@@ -1,0 +1,30 @@
+<examples>
+    <example>
+        <output>
+        Considerations and Next Steps:
+
+        For the first part, we need to describe where the bears are
+        - The second part is a question, so we'll need the question particle at the end
+        - Remember that living things (like bears) use a different existence verb than non-living things
+        - Consider the tense - the first part is present tense, while the second part is past tense
+        - Think about which particles would show location and mark the subject
+        </output>
+        <score>6</score>
+        <score:reason>
+            This example score 6 because the returned information is too verbose
+        </score:reason>
+    </example>
+    <example>
+        <output>
+        Considerations and Next Steps:
+        - Think about how to say "at the door" in Japanese. You'll need a location marker.
+        - Bears are living things, so use the correct verb for their existence.
+        - To ask "Did you leave the garbage out?" you'll need the past tense of "to put out."
+        - Consider using "outside" to specify where the garbage was left.
+        </output>
+        <score>10</score>
+        <score:reason>
+            This example score 10 because the returned information is concise
+        </score:reason>
+    </example>
+</examples>
