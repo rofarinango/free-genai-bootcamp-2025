@@ -21,6 +21,7 @@ The formatted output will generally contain three parts:
 - vocabulary table
 - sentence structure
 - clues and considerations
+-x`
 
 ### Vocabulary Table
 - The table of vocabulary should only have the following columns: Japanese, Romaji, English
@@ -33,6 +34,7 @@ The formatted output will generally contain three parts:
 - Do not provide particles in the sentence structure
 - Do not provide tenses in the sentence structure
 - remember to consider beginner level sentence structures.
+- reference the <file>sentence-structure-examples.xml</file> for good structure examples.
 
 Here is an example of simple sentence structures.
 - The bird is black. -> [Subject][Adjective-desu]

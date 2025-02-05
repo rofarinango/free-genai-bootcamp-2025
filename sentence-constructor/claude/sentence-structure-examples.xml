@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sentence-structure>
+    <rules>
+        <rule>Do not provide particles in the sentence structure</rule>
+        <rule>Do not provide tenses in the sentence structure</rule>
+        <rule>Remember to consider beginner level sentence structures</rule>
+    </rules>
+    
+    <examples>
+        <example>
+            <english>The bird is black.</english>
+            <structure>[Subject][Adjective-desu]</structure>
+        </example>
+        
+        <example>
+            <english>The raven is in the garden.</english>
+            <structure>[Location][Subject][Verb]</structure>
+        </example>
+        
+        <example>
+            <english>Put the garbage in the garden.</english>
+            <structure>[Location][Object][Verb]</structure>
+        </example>
+        
+        <example>
+            <english>Did you see the raven?</english>
+            <structure>[Subject][Object][Verb-past]?</structure>
+        </example>
+        
+        <example>
+            <english>This morning, I saw the raven.</english>
+            <structure>[Time][Subject][Object][Verb]</structure>
+        </example>
+    </examples>
+</sentence-structure>

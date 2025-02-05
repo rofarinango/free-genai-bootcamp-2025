@@ -1,0 +1,28 @@
+<examples>
+<example>
+    <user:input>
+        Bears are at the door, did you leave the garbage out?
+    </user:input>
+    <score>4</score>
+    <score_reasons>
+    - BAD: in the vocabulary table it did not show japanese characters, the cells are just blanks
+    - BAD: the beginning sentence is unnecessary, should just show the vocabulary table
+    - BAD: In the clues we should not provide the polite form of verbs because the student needs to figure that out.
+    - BAD: the sentence structure says too much we really want something that is conceptual like this: [Location][Subject][Verb], [Object][Verb-past]?
+    </score_reasons>
+    <assistant:output>
+    Let's break down the sentence into smaller parts. Here's a table of vocabulary that might be helpful:
+    |   Japanese    |   Romaji	|   English
+    |               |   kuma    |   bear    |
+    |               |   tobira	|   door    |
+    |               |   gomi	|   garbage |
+    |               |   naka	|   inside/out|
+    |               |   soto	|   outside |
+    |               |   aru	    |   to exist, to be |
+    |               |   okosu	|   to put out, to leave out    |
+    |               |   miru	|   to see, to look |
+    Now, let's think about the sentence structure. We might need to use a question word (e.g., ?) to ask about the garbage. We also need to describe the location of the bears and the garbage.
+    Can you think of how to say "at the door" in Japanese?
+    </assistant:output>
+</example>
+</examples>
