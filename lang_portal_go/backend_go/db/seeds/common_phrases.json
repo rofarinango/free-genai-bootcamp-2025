@@ -1,0 +1,20 @@
+[
+    {
+        "kanji": "ありがとう",
+        "romaji": "arigatou",
+        "english": "thank you",
+        "parts": [
+            { "kanji": "ありがとう", "romaji": ["arigatou"] }
+        ]
+    },
+    {
+        "kanji": "お願いします",
+        "romaji": "onegaishimasu",
+        "english": "please",
+        "parts": [
+            { "kanji": "お", "romaji": ["o"] },
+            { "kanji": "願い", "romaji": ["negai"] },
+            { "kanji": "します", "romaji": ["shimasu"] }
+        ]
+    }
+] 

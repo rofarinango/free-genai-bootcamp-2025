@@ -1,0 +1,26 @@
+[
+    {
+        "kanji": "赤",
+        "romaji": "aka",
+        "english": "red",
+        "parts": [
+            { "kanji": "赤", "romaji": ["aka"] }
+        ]
+    },
+    {
+        "kanji": "青",
+        "romaji": "ao",
+        "english": "blue",
+        "parts": [
+            { "kanji": "青", "romaji": ["ao"] }
+        ]
+    },
+    {
+        "kanji": "黄",
+        "romaji": "ki",
+        "english": "yellow",
+        "parts": [
+            { "kanji": "黄", "romaji": ["ki"] }
+        ]
+    }
+] 

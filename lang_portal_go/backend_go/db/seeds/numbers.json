@@ -1,0 +1,26 @@
+[
+    {
+        "kanji": "一",
+        "romaji": "ichi",
+        "english": "one",
+        "parts": [
+            { "kanji": "一", "romaji": ["ichi"] }
+        ]
+    },
+    {
+        "kanji": "二",
+        "romaji": "ni",
+        "english": "two",
+        "parts": [
+            { "kanji": "二", "romaji": ["ni"] }
+        ]
+    },
+    {
+        "kanji": "三",
+        "romaji": "san",
+        "english": "three",
+        "parts": [
+            { "kanji": "三", "romaji": ["san"] }
+        ]
+    }
+] 

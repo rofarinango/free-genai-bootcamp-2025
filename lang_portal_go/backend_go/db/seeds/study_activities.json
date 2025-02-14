@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Vocabulary Quiz",
+        "thumbnail_url": "/images/vocab-quiz.jpg",
+        "description": "Test your vocabulary knowledge with flashcards"
+    },
+    {
+        "name": "Writing Practice",
+        "thumbnail_url": "/images/writing.jpg",
+        "description": "Practice writing Japanese characters"
+    },
+    {
+        "name": "Listening Exercise",
+        "thumbnail_url": "/images/listening.jpg",
+        "description": "Improve your listening comprehension"
+    }
+] 
