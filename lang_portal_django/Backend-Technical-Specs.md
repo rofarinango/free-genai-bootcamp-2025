@@ -17,7 +17,7 @@ A language learning school wants to build a prototype of learning portal which w
 
 ## Directory Structure
 ```text
-lang_portal_django/
+backend_django/
 │
 ├── backend_django/               # Main project directory
 │   ├── __init__.py               # Package marker
@@ -45,7 +45,7 @@ lang_portal_django/
 
 ## Database Schema
 
-Our database will be a single sqlite database called `words.db` that will be in the root of the project folder of `lang_portal_django`
+Our database will be a single sqlite database called `words.db` that will be in the root of the project folder of `backend_django`
 
 We have the following tables:
 - words - stored vocabulary words
