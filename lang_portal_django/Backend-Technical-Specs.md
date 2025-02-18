@@ -8,35 +8,44 @@ A language learning school wants to build a prototype of learning portal which w
     - A unified launchpad to launch different learning apps
 
 ## Technical Requirements
-    - The backend will built using Go  
-    - Mage is a task runner for Go. 
+    - The backend will built Python
     - The database will be SQLite3
-    - The API will be built using Gin
+    - The API will be built using Django
     - The API will always return JSON
     - There will be no authentication or authorization
-    - Everything will be trated as a single user
+    - Everything will be treated as a single user
 
 ## Directory Structure
 ```text
-backend_go/
-├── cmd/
-│   └── server/          # Main application entry point
-├── internal/
-│   ├── api/            # API handlers and routes
-│   ├── models/         # Database models
-│   ├── handlers/       # Handlers for the API
-│   └── services/       # Business logic
-├── db/
-│   ├── migrations/     # SQL migration files
-│   └── seeds/         # Seed data JSON files
-├── magefiles/         # Mage task definitions
-├── go.mod             # Go module file
-└── words.db           # SQLite database
+lang_portal_django/
+│
+├── backend_django/               # Main project directory
+│   ├── __init__.py               # Package marker
+│   ├── settings.py               # Project settings
+│   ├── urls.py                   # URL routing
+│   ├── wsgi.py                   # WSGI configuration
+│   └── asgi.py                   # ASGI configuration (if needed)
+│
+├── api/                          # API application
+│   ├── __init__.py               # Package marker
+│   ├── admin.py                  # Admin configuration
+│   ├── apps.py                   # Application configuration
+│   ├── models.py                 # Database models
+│   ├── serializers.py            # Serializers for JSON responses
+│   ├── urls.py                   # API URL routing
+│   ├── views.py                  # API views
+│   └── tests.py                  # Unit tests for the API
+│
+├── manage.py                     # Django management script
+│
+├── db.sqlite3                    # SQLite database file
+│
+└── requirements.txt              # Project dependencies
 ```
 
 ## Database Schema
 
-Our database will be a single sqlite database called `words.db` that will be in the root of the project folder of `backend_go`
+Our database will be a single sqlite database called `words.db` that will be in the root of the project folder of `lang_portal_django`
 
 We have the following tables:
 - words - stored vocabulary words
