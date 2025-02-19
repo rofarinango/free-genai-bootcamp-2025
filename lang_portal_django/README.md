@@ -6,7 +6,7 @@ This is a backend for the language portal build in the Free GenAI Bootcamp using
 Model used: gpt-4o-mini
 
 ## Images
-
+![Screenshot 2025-02-18 at 6 09 59 PM](https://github.com/user-attachments/assets/6963e0bd-bca6-44a7-b222-5cd9a0fd99df)
 
 ## Technologies Used
 
