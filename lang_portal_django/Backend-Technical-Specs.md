@@ -17,30 +17,31 @@ A language learning school wants to build a prototype of learning portal which w
 
 ## Directory Structure
 ```text
-backend_django/
+lang_portal_django/
 │
 ├── backend_django/               # Main project directory
-│   ├── __init__.py               # Package marker
-│   ├── settings.py               # Project settings
-│   ├── urls.py                   # URL routing
-│   ├── wsgi.py                   # WSGI configuration
-│   └── asgi.py                   # ASGI configuration (if needed)
-│
-├── api/                          # API application
-│   ├── __init__.py               # Package marker
-│   ├── admin.py                  # Admin configuration
-│   ├── apps.py                   # Application configuration
-│   ├── models.py                 # Database models
-│   ├── serializers.py            # Serializers for JSON responses
-│   ├── urls.py                   # API URL routing
-│   ├── views.py                  # API views
-│   └── tests.py                  # Unit tests for the API
-│
-├── manage.py                     # Django management script
-│
-├── db.sqlite3                    # SQLite database file
-│
-└── requirements.txt              # Project dependencies
+│   ├── backend_django/           # App
+│   │   ├── __init__.py           # Package marker
+│   │   ├── settings.py           # Project settings
+│   │   ├── urls.py               # URL routing
+│   │   ├── wsgi.py               # WSGI configuration
+│   │   └── asgi.py               # ASGI configuration (if needed)
+│   │
+│   ├── api/                      # API application App
+│   │   ├── __init__.py           # Package marker
+│   │   ├── admin.py              # Admin configuration
+│   │   ├── apps.py               # Application configuration
+│   │   ├── models.py             # Database models
+│   │   ├── serializers.py        # Serializers for JSON responses
+│   │   ├── urls.py               # API URL routing
+│   │   ├── views.py              # API views
+│   │   └── tests.py              # Unit tests for the API
+│   │
+│   ├── manage.py                 # Django management script
+│   │
+│   ├── db.sqlite3                # SQLite database file
+│   │
+│   └── requirements.txt          # Project dependencies
 ```
 
 ## Database Schema
