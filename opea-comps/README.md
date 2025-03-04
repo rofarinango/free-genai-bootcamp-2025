@@ -1,59 +1,32 @@
-## Running Ollama Third-Party Service Container
+## OPEA progress
+Attempt at running ChatQnA from OPEA GenAIExamples locally on a M3 Pro Apple Chip.
 
+## Technical Uncertainty
 
-### Choosing a Model
-Choose the mode_id that ollama will launch from the [Ollama Library](https://ollama.com/library).
+### Will ChatQnA work on a M3 Apple Silicon chip?
+OPEA currently doesnt support Apple silicon, as per trying to pull the images on `docker compose up -d` there was no matching manifest in the manifest list entries. Therefore I tried building the Docker images.
 
-### Getting the Host IP
+### Able to build docker images on M3 chip?
+On trying to build Retrieve Image from the `GenAIComps` repo, failed. When doing some research found an [issue](https://github.com/opea-project/GenAIExamples/issues/1074) on the `GenAIExamples` saying Build Docker image on Mac is not supported yet. So instead i tried to run `ChatQnA` on a different machine.
 
-#### Linux
-Get your IP address
-```sh
-sudo api install net-tools
-ifconfig
+### Running `ChatQnA` on WSL Windows 11 machine
 
-```
+Machine Specs
+CPU: AMD Ryzen 5 5560U with Radeon Graphics
+RAM: 40GB
+GPU: AMD Radeon Graphics
+OS: Windows 11
 
-Or you can try this way `hostname -I | awk '{print $1}'`
+as per my machine specs running a AMD CPU, followed the [README](https://github.com/opea-project/GenAIExamples/blob/main/ChatQnA/docker_compose/amd/gpu/rocm/README.md) to build MegaService of ChatQnA. On `docker compose up -d` encounter another error `Issue with running your Docker image for pytorch. Missing /dev/kfd`, on doing some reseach I thought it might been related to using WSL so found some documentation on how
+1. [Install Radeon software for WSL with ROCm](https://rocm.docs.amd.com/projects/radeon/en/latest/docs/install/wsl/install-radeon.html)
+2. [Install PyTorch for Radeon GPUs on WSL](https://rocm.docs.amd.com/projects/radeon/en/latest/docs/install/wsl/install-pytorch.html)
 
-#### Mac
-```ipconfig getifaddr en0```
+After following the docs on checking if the GPU was listed as an agent (`rocminfo`)
 
+Got the following error:
 
-HOST_IP=$(ipconfig getifaddr en0) NO_PROXY=localhost 
-LLM_ENDPOINT_PORT=8008 LLM_MODEL_ID="llama3.2:1b" docker compose up
+![wsl-error](./assets/wsl-error.png)
 
-### Ollama API
-
-Once the Ollama server is running we can make API calls to the ollama API
-
-https://github.com/ollama/ollama/blob/main/docs/api.md
-
-## Download (Pull) a mode
-
-curl http://localhost:8008/api/pull -d '{
-    "model": "llama3.2:1b"
-}'
-
-## Generate a Request
-
-curl http://localhost:8008/api/generate -d '{
-    "model": "llama3.2:1b",
-    "prompt": "Why is the sky BLUE?"
-}'
-
-
-### Technical Uncertainty
-Q: Does bridge mode mean we can only access Ollama API with another model in the docker compose?
-
-A: No, the host machine will be able to access it
-
-Q: Which port is being mapped 8008->14143
-A: In this case 8008 is the port that the host machine will acess. The other in the guest port (the port of the service inside container)
-
-Q: If we pass the LLM_MODEL_ID to the ollama server will it download the model when on start?
-A: It does not appear so. The ollama CLI might be running multiple APIs so you need to call the pull api before trying to generate text
-
-Q: Will the model be downloaded in the container?
-Does that mean the ml model will be deleted when the container stops running?
-A: THe model will download into the container, and vanish when the container stop running. You need to mount a local drive and there is probably more work to be done.
+After reading the prerequisits carefully WSL requires installation of compatible driver: [AMD Software: Adrenalin Edition 24.12.1 for WSL](https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-12-1.html)
+And I currently have [AMD Software: Adrenalin Edition 24.9.1](https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-9-1.html) which doesn't support WSL and 24.12.1 doesn't support my current CPU so I couldn't update the driver for WSL.
+There unssucesfull to Run docker compose, docker pull the images from opea successfully but cant start the containers throwing the `Issue with running your Docker image for pytorch. Missing /dev/kfd` error.
