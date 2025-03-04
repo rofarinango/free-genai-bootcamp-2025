@@ -1,0 +1,1 @@
+# This tool uses duckduckgo  to search the internet for pages to then further crawl.
