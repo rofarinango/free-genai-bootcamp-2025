@@ -14,7 +14,6 @@ def get_allowed_origins(app):
         cursor = app.db.cursor()
         cursor.execute('SELECT url FROM study_activities')
         urls = cursor.fetchall()
-        # Convert URLs to origins (e.g., https://example.com/app -> https://example.com)
         origins = set()
         for url in urls:
             try:
@@ -24,9 +23,9 @@ def get_allowed_origins(app):
                 origins.add(origin)
             except:
                 continue
-        origins.add("http://localhost:5173")  # Add the frontend URL
+        print("Allowed origins:", origins)  # Debugging line
         return list(origins) if origins else ["*"]
-    except:
+    except Exception as e:
         return ["*"]  # Fallback to allow all origins if there's an error
 
 def create_app(test_config=None):
@@ -44,13 +43,20 @@ def create_app(test_config=None):
     
     # Get allowed origins from study_activities table
     allowed_origins = get_allowed_origins(app)
+    print(allowed_origins)
     
     # In development, add localhost to allowed origins
     if app.debug:
-        allowed_origins.extend(["http://localhost:8080", "http://127.0.0.1:8080"])
+        allowed_origins.extend(["http://127.0.0.1:5000", "http://127.0.0.1:8080"])
     
-    # Configure CORS with combined origins
-    CORS(app)
+    # Configure CORS to allow specific origins
+    CORS(app, resources={
+        r"/*": {
+            "origins": allowed_origins,
+            "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+            "allow_headers": ["Content-Type", "Authorization"]
+        }
+    })
 
     # Close database connection
     @app.teardown_appcontext
