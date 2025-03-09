@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS words (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    english TEXT NOT NULL,
+    spanish TEXT NOT NULL,
+    parts TEXT DEFAULT '{}'
+); 

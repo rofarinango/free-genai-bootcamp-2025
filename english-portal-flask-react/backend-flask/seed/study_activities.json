@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Vocabulary Quiz",
+        "description": "Test your vocabulary knowledge with interactive flashcards",
+        "thumbnail_url": "src/assets/study-activities/spelling-practice-thumbnail.png"
+    },
+    {
+        "name": "Word Match",
+        "description": "Match English words with their Spanish translations",
+        "thumbnail_url": "src/assets/study-activities/spelling-practice-thumbnail.png"
+    },
+    {
+        "name": "Spelling Practice",
+        "description": "Practice spelling English words correctly",
+        "thumbnail_url": "src/assets/study-activities/spelling-practice-thumbnail.png"
+    }
+] 

@@ -1,0 +1,34 @@
+[
+    {
+        "english": "happy",
+        "spanish": "feliz",
+        "parts": {
+            "type": "adjective",
+            "category": "emotions"
+        }
+    },
+    {
+        "english": "sad",
+        "spanish": "triste",
+        "parts": {
+            "type": "adjective",
+            "category": "emotions"
+        }
+    },
+    {
+        "english": "big",
+        "spanish": "grande",
+        "parts": {
+            "type": "adjective",
+            "category": "size"
+        }
+    },
+    {
+        "english": "small",
+        "spanish": "pequeño",
+        "parts": {
+            "type": "adjective",
+            "category": "size"
+        }
+    }
+] 

@@ -1,0 +1,34 @@
+[
+    {
+        "english": "run",
+        "spanish": "correr",
+        "parts": {
+            "type": "verb",
+            "category": "action"
+        }
+    },
+    {
+        "english": "walk",
+        "spanish": "caminar",
+        "parts": {
+            "type": "verb",
+            "category": "action"
+        }
+    },
+    {
+        "english": "eat",
+        "spanish": "comer",
+        "parts": {
+            "type": "verb",
+            "category": "action"
+        }
+    },
+    {
+        "english": "drink",
+        "spanish": "beber",
+        "parts": {
+            "type": "verb",
+            "category": "action"
+        }
+    }
+] 
